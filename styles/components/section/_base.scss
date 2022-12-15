@@ -1,0 +1,57 @@
+@import "styles/variables/index";
+@import "styles/mixins/index";
+
+&--base {
+  position: relative;
+
+  #{$root} {
+
+    &__content {
+      max-width: 537px;
+    }
+
+    &__title {
+      @include typo-tinos-400;
+      color: $color-orange-2;
+      padding-left: 14px;
+      margin: 0 0 7px 0;
+    }
+
+    &__subtitle {
+      @include typo-tinos-400;
+      font-size: 50px;
+      line-height: 57px;
+      color: $color-orange-2;
+      padding-left: 34px;
+    }
+
+    &__lines {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__line {
+      border: 1px solid #C4C4C4;
+      transform: rotate(180deg);
+      width: 61px;
+      height: 2px;
+
+    }
+
+    &__slogan {
+      @include typo-400;
+      font-size: 18px;
+      line-height: 25px;
+      color: $color-white;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    &__action {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+  }
+}

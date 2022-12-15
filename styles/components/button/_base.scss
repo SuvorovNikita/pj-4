@@ -5,10 +5,14 @@
   @include typo-700;
   background: $color-orange;
   color: $color-white;
-  line-height: 19px;
   padding: 14px 18px;
+
+  &--padding {
+    padding: 14px 27px;
+  }
 
   &:hover {
     background: $color-orange-2;
   }
+
 }
