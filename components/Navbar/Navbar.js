@@ -1,10 +1,12 @@
 import Link from 'next/link';
 
+
 const navigation = [
     {id: 1, title: 'ГЛАВНАЯ', path: '/'},
     {id: 2, title: 'МЕНЮ', path: '/'},
     {id: 3, title: 'О НАС', path: '/'},
     {id: 4, title: 'БРОНЬ', path: '/'},
+   
 ];
 
 const Navbar = () => {

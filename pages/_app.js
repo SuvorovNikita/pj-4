@@ -1,5 +1,5 @@
 import Layout from '../components/Layout/Layout';
-import photo from '../public/Hero/hero.png'
+
 import '../styles/index.scss';
 
 

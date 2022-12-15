@@ -1,6 +1,15 @@
+@import "../styles/variables/index";
+@import "../styles/mixins/index";
+
 .c-header {
   padding: 50px 0;
-  display: block;
+  display: none;
+  position: relative;
+  z-index: 1;
+
+  @include media-up(lg) {
+    display: block;
+  }
 
   $root: &;
 
@@ -9,26 +18,69 @@
     &__inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
 
     &__menu {
       display: flex;
+      margin-left: 60px;
+    }
+
+    &__menu-link {
+      @include typo-700;
+      color: $color-white;
+      margin-right: 28px;
+
+      &:hover {
+        color: $color-orange-2;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+    }
+
+    &__line {
+      border: 1px solid $color-white;
+      transform: rotate(180deg);
+      margin: 0 34px 0 15px;
+      height: 51px;
+    }
+
+    &__phone {
+      @include typo-700;
+      line-height: 25px;
+      color: $color-white;
+      margin: 2px 0 0 4px;
+      font-size: 18px;
+
+      &:hover {
+        color: $color-orange-2;
+      }
+    }
+
+    &__text {
+      @include typo-400;
+      color: $color-white;
     }
 
     &__logo {
       display: flex;
       width: 100px;
       height: 67.96px;
+      margin-right: auto;
     }
 
     &__cart {
       display: flex;
+      align-items: center;
     }
 
     &__contact {
       display: flex;
       flex-flow: column;
+      max-width: 160px;
+      margin-right: 45px;
     }
   }
 

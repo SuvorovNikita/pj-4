@@ -1,9 +1,18 @@
 @import '../../variables/index';
 
-@mixin typo-400 {
+@mixin typo-700 {
   font-family: $font-family;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
+  line-height: 19px;
 }
+@mixin typo-400 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
 

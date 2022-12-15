@@ -1,13 +1,14 @@
 &--bg {
   background-image: url("../../../public/Hero/hero.png");
-  position: relative;
+  position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
   padding-top: 203px;
-
+  left: 0;
+  top: 0;
   //#{$root} {
   //
   //}

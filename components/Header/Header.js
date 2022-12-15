@@ -5,8 +5,8 @@ import Navbar from '../Navbar/Navbar';
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 import logo from '../../public/Logo/logo.svg';
+import phone from "../../public/Icon/phone.svg"
 import cart from "../../public/Icon/cart.svg"
-
 
 const Header = () => {
     return (<>
@@ -21,12 +21,13 @@ const Header = () => {
                     <Navbar/>
                     <div className="c-header__cart">
                         <span className="c-header__icon">
-                            <Image src={cart} alt="cart"/>
+                        <Link href="/"> <Image src={cart} alt="cart"/></Link>
                         </span>
+                        <div className="c-header__line"></div>
                         <div className="c-header__contact">
                             <span className="c-header__icon">
-                                  <Image src={cart} alt="cart"/>
-                                <Link href="/">+999-888-76-54</Link>
+                                  <Image src={phone} alt="cart"/>
+                                <Link className="c-header__phone" href="/">+999-888-76-54</Link>
                             </span>
                             <div className="c-header__text">Свяжитесь с нами для бронирования</div>
                         </div>
