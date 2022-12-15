@@ -1,0 +1,125 @@
+@use 'sass:math';
+@import '../mixins/index';
+@import '../variables/index';
+
+.container {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  padding: 0 $grid-gutter;
+  margin: 0 auto;
+
+  @each $key, $value in $container-max-widths {
+    @include media-up($key) {
+      max-width: $value;
+    }
+  }
+
+  &--sm {
+    @each $key, $value in $container-max-widths-sm {
+      @include media-up($key) {
+        max-width: $value;
+      }
+    }
+  }
+
+  &--relation {
+    position: relative;
+  }
+}
+
+.row {
+  $root: &;
+  margin-left: -#{$grid-gutter};
+  margin-right: -#{$grid-gutter};
+  display: flex;
+  flex-flow: row wrap;
+
+  @include media-down(lg) {
+    flex-direction: column-reverse;
+  }
+}
+
+.row-no-wrap {
+  $root: &;
+  margin-left: -#{$grid-gutter};
+  margin-right: -#{$grid-gutter};
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+[class^='col'] {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  max-width: 100%;
+  flex-basis: 100%;
+  flex-grow: 1;
+  //flex: 1 0 0%;
+}
+
+.col-auto {
+  flex: 1 0 0;
+}
+
+.flex-none {
+  flex: none;
+}
+
+$size: math.div(100%, 12);
+$margin: $grid-gutter * 2;
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 calc(#{$size * $i});
+    max-width: calc(#{$size * $i});
+  }
+}
+
+@each $key, $value in $grid-breakpoints {
+  .col-#{$key}-auto {
+    @include media-up($key) {
+      flex: 1 0 0;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$key}-#{$i} {
+      flex-basis: 100%;
+      flex-grow: 1;
+
+      @include media-up($key) {
+        flex: 0 0 calc(#{$size * $i});
+        max-width: calc(#{$size * $i});
+      }
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+@each $key, $value in $grid-breakpoints {
+  .d-block-#{$key} {
+    display: none;
+
+    @include media-up($key) {
+      display: block;
+    }
+  }
+}
+
+@each $key, $value in $grid-breakpoints {
+  .d-none-#{$key} {
+    @include media-up($key) {
+      display: none;
+    }
+  }
+}

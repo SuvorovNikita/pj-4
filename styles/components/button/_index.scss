@@ -1,0 +1,16 @@
+.c-button {
+  $root: &;
+  user-select: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0;
+
+  @import 'base';
+}

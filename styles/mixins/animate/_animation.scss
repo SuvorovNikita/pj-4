@@ -1,0 +1,10 @@
+@use '../../variables';
+@use '../media';
+
+@mixin animate-animation() {
+  @include media.media-up(variables.$animation-breakpoint) {
+    animation-duration: variables.$animation-duration;
+    animation-timing-function: variables.$animation-function;
+    animation-fill-mode: forwards;
+  }
+}

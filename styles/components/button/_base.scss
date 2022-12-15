@@ -1,0 +1,14 @@
+@import '../../mixins/index';
+@import '../../variables/index';
+
+&--base {
+  @include typo-400;
+  background: $color-orange;
+  color: $color-white;
+  line-height: 19px;
+  padding: 14px 18px;
+
+  &:hover {
+    background: $color-orange-2;
+  }
+}

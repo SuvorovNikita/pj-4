@@ -1,0 +1,24 @@
+@import '../../variables/index';
+@import '../media';
+
+@mixin animate-transition($properties...) {
+  @if length($properties) == 0 {
+    $properties: all;
+  }
+
+  @include media-up($transition-breakpoint) {
+    transition-timing-function: $transition-function;
+    transition-duration: $transition-duration;
+    transition-property: $properties;
+  }
+}
+
+@mixin animate-transition-no-media($properties...) {
+  @if length($properties) == 0 {
+    $properties: all;
+  }
+
+  transition-timing-function: $transition-function;
+  transition-duration: $transition-duration;
+  transition-property: $properties;
+}
