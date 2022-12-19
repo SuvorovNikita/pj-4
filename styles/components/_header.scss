@@ -2,6 +2,8 @@
 @import "../styles/mixins/index";
 
 .c-header {
+  $root: &;
+
   padding: 50px 0 203px 0;
   display: none;
   position: relative;
@@ -11,89 +13,82 @@
     display: block;
   }
 
-  $root: &;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
 
-  #{$root} {
+  &__menu {
+    display: flex;
+    margin-left: 60px;
+  }
 
-    &__inner {
-      display: flex;
-      align-items: center;
-    }
+  &__menu-link {
+    @include typo-700;
+    color: $color-white;
+    margin-right: 28px;
 
-    &__menu {
-      display: flex;
-      margin-left: 60px;
-    }
-
-    &__menu-link {
-      @include typo-700;
-      color: $color-white;
-      margin-right: 28px;
-
-      &:hover {
-        color: $color-orange-2;
-      }
-    }
-
-    &__icon {
-      display: flex;
-      align-items: center;
-    }
-
-    &__line {
-      border: 1px solid $color-white;
-      transform: rotate(180deg);
-      margin: 0 34px 0 15px;
-      height: 51px;
-    }
-
-    &__phone {
-      @include typo-700;
-      line-height: 25px;
-      color: $color-white;
-      margin: 2px 0 0 4px;
-      font-size: 18px;
-
-      &:hover {
-        color: $color-orange-2;
-      }
-    }
-
-    &__text {
-      @include typo-400;
-      color: $color-white;
-    }
-
-    &__logo {
-      display: flex;
-      width: 100px;
-      height: 67.96px;
-      margin-right: auto;
-    }
-
-    &__cart {
-      display: flex;
-      align-items: center;
-    }
-
-    &__contact {
-      display: flex;
-      flex-flow: column;
-      max-width: 160px;
-      margin-right: 45px;
+    &:hover {
+      color: $color-orange-2;
     }
   }
 
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__line {
+    border: 1px solid $color-white;
+    transform: rotate(180deg);
+    margin: 0 34px 0 15px;
+    height: 51px;
+  }
+
+  &__phone {
+    @include typo-700;
+    line-height: 25px;
+    color: $color-white;
+    margin: 2px 0 0 4px;
+    font-size: 18px;
+
+    &:hover {
+      color: $color-orange-2;
+    }
+  }
+
+  &__text {
+    @include typo-400;
+    color: $color-white;
+  }
+
+  &__logo {
+    display: flex;
+    width: 100px;
+    height: 67.96px;
+    margin-right: auto;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    display: flex;
+    flex-flow: column;
+    max-width: 160px;
+    margin-right: 45px;
+  }
 }
+
 
 .c-mobile-header {
   $root: &;
-  background-color: #fff;
   display: block;
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+  @include typo-tinos-400;
+  font-size: 15px;
+  color: $color-orange;
   left: 0;
   line-height: 24px;
   position: fixed;
@@ -143,7 +138,7 @@
 
 
   &__body {
-    background-color: #fff;
+    background-color: $color-white;
     display: block;
     height: calc(100vh - 50px);
     left: 0;
@@ -166,8 +161,9 @@
   &__flex {
     display: flex;
     flex-flow: column nowrap;
+    text-align: center;
     min-height: 100%;
-    padding: 13px 13px 13px 0px;
+    padding: 13px 13px 13px 0;
   }
 
   &__navigation {
@@ -184,6 +180,7 @@
     align-content: center;
     display: flex;
     margin-top: 60px;
+    justify-content: center;
   }
 
   &.is-opened {

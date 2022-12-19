@@ -9,6 +9,7 @@ import phone from "../../public/Icon/phone.svg"
 import cart from "../../public/Icon/cart.svg"
 
 const Header = () => {
+    
     return (<>
         <header className="c-header">
             <div className="container">

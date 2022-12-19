@@ -1,11 +1,21 @@
+@import "styles/variables/index";
+@import "styles/mixins/index";
+
+
 &--bg {
-  background-image: url("../../../public/Hero/hero.png");
+  background-image: url("../../../public/MobileImg/Img/hero.png");
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: block;
-  height: 100%;
+  height: 800px;
   width: 100%;
   left: 0;
   top: 0;
+
+
+  @include media-up(lg){
+    background-image: url("../../../public/Hero/hero.png");
+  }
 }

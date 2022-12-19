@@ -2,15 +2,16 @@ import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import menu from '../../../pj-3/public/header/menu.svg';
-import close from '../../../pj-3/public/header/close.svg';
-import logo from '../../../pj-3/public/header/logo.svg';
+import menu from '../../public/MobileImg/Icon/btn.svg';
+import close from '../../public/MobileImg/Icon/close.svg';
+import logo from '../../public/MobileImg/Icon/logo-mobile.svg';
 
 const navigation = [
-    {id: 1, title: 'Home', path: '/'},
-    {id: 2, title: 'About', path: '/about'},
-    {id: 3, title: 'Services', path: '/services'},
-    {id: 4, title: 'Blog', path: '/blog'},
+    {id: 1, title: 'Главная', path: '/'},
+    {id: 2, title: 'Меню', path: '/'},
+    {id: 3, title: 'О нас', path: '/'},
+    {id: 4, title: 'Бронь', path: '/'},
+    {id: 5, title: 'Корзина', path: '/cart'},
 ];
 
 const MobileMenu = () => {
@@ -70,7 +71,7 @@ const MobileMenu = () => {
                                     </div>
                                     <div className="c-mobile-header__actions">
                                         <button className="c-button c-button--base" href="#">
-                                            CONTACT US
+                                            Заказ столика
                                         </button>
                                     </div>
                                 </div>

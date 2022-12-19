@@ -7,22 +7,48 @@
   #{$root} {
 
     &__content {
-      max-width: 537px;
+      text-align: center;
+      max-width: none;
+      margin-top: 204px;
+
+      @include media-up(lg) {
+        max-width: 537px;
+        margin-top: 0;
+        text-align: left;
+      }
+
     }
 
     &__title {
       @include typo-tinos-400;
+      font-size: 40px;
+      line-height: 46px;
       color: $color-orange-2;
-      padding-left: 14px;
-      margin: 0 0 7px 0;
+      margin: 0;
+      @include media-up(lg) {
+
+        @include typo-tinos-400;
+        color: $color-orange-2;
+        padding-left: 14px;
+        margin: 0 0 7px 0;
+      }
+
     }
 
     &__subtitle {
-      @include typo-tinos-400;
-      font-size: 50px;
-      line-height: 57px;
       color: $color-orange-2;
-      padding-left: 34px;
+      font-size: 30px;
+
+      @include media-up(lg) {
+
+        @include typo-tinos-400;
+        font-size: 50px;
+        line-height: 57px;
+        color: $color-orange-2;
+        padding-left: 34px;
+
+      }
+
     }
 
     &__lines {
@@ -32,26 +58,44 @@
     }
 
     &__line {
-      border: 1px solid #C4C4C4;
-      transform: rotate(180deg);
-      width: 61px;
-      height: 2px;
-
+      display: none;
+      @include media-up(lg) {
+        border: 1px solid $color-line;
+        transform: rotate(180deg);
+        width: 61px;
+        height: 2px;
+      }
     }
 
     &__slogan {
       @include typo-400;
-      font-size: 18px;
-      line-height: 25px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
       color: $color-white;
-      margin-left: 8px;
-      margin-right: 8px;
+      text-transform: uppercase;
+      margin-top: 2px;
+
+      @include media-up(lg) {
+        @include typo-400;
+        font-size: 18px;
+        line-height: 25px;
+        color: $color-white;
+        margin-left: 8px;
+        margin-right: 8px;
+        text-transform: uppercase;
+      }
+
     }
 
     &__action {
-      margin-top: 20px;
-      text-align: center;
-    }
+      margin-top: 45px;
 
+      @include media-up(lg) {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+    }
   }
 }
