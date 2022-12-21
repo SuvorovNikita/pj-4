@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Navbar from '../Navbar/Navbar';
 import MobileMenu from "../MobileMenu/MobileMenu";
 
-import logo from '../../public/Logo/logo.svg';
-import phone from "../../public/Icon/phone.svg"
-import cart from "../../public/Icon/cart.svg"
+import logo from '../../public/logo/logo.svg';
+import phone from "../../public/icon/phone.svg"
+import cart from "../../public/icon/cart.svg"
 
 const Header = () => {
     

@@ -15,7 +15,7 @@ const Navbar = () => {
             {navigation.map(({id, title, path}) => (
                 <>
                     <div className="c-header__item">
-                        <Link key={id} className="c-header__menu-link" href={path}>
+                        <Link className="c-header__menu-link" href={path}>
                             {title}
                         </Link>
                     </div>

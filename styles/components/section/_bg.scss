@@ -3,7 +3,7 @@
 
 
 &--bg {
-  background-image: url("../../../public/MobileImg/Img/hero.png");
+  background-image: url("../../../public/MobileImg/img/hero.png");
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +16,6 @@
 
 
   @include media-up(lg){
-    background-image: url("../../../public/Hero/hero.png");
+    background-image: url("../../../public/hero/hero.png");
   }
 }

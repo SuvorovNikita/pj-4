@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import menu from '../../public/MobileImg/Icon/btn.svg';
-import close from '../../public/MobileImg/Icon/close.svg';
-import logo from '../../public/MobileImg/Icon/logo-mobile.svg';
+import menu from '../../public/MobileImg/icon/btn.svg';
+import close from '../../public/MobileImg/icon/close.svg';
+import logo from '../../public/MobileImg/icon/logo-mobile.svg';
 
 const navigation = [
     {id: 1, title: 'Главная', path: '/'},
@@ -62,7 +62,7 @@ const MobileMenu = () => {
                                         {navigation.map(({id, title, path}) => (
                                             <>
                                                 <div className="c-mobile-header__item">
-                                                    <Link key={id} className="c-mobile-header__menu-link" href={path}>
+                                                    <Link className="c-mobile-header__menu-link" href={path}>
                                                         {title}
                                                     </Link>
                                                 </div>

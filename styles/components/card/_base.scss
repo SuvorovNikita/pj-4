@@ -1,0 +1,74 @@
+@import "styles/mixins/index";
+@import "styles/variables/index";
+
+&--base {
+
+  #{$root} {
+
+    &__inner {
+      display: block;
+
+      @include media-up(lg) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__body {
+      background: $color-white;
+      box-shadow: 10px 10px 40px 20px $color-shadow;
+      padding-top: 49px;
+      padding-bottom: 16px;
+      margin: 0 auto 14px;
+
+      @include media-up(lg) {
+        width: 349px;
+        background: $color-white;
+        box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+        padding-top: 49px;
+        padding-bottom: 16px;
+        margin-right: 14px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__content {
+      text-align: center;
+      @include typo-card-400;
+    }
+
+    &__title {
+      margin-bottom: 6px;
+
+      @include media-up(lg) {
+        color: $color-black;
+        margin-bottom: 20px;
+      }
+
+
+      span {
+        color: $color-gray;
+      }
+    }
+
+    &__subtitle {
+      max-width: 290px;
+      font-size: 22px;
+      line-height: 25px;
+      color: $color-gray-2;
+      margin: 0 auto;
+
+      @include media-up(lg) {
+        color: $color-gray-2;
+        max-width: 376px;
+        font-size: 26px;
+      }
+
+    }
+
+  }
+
+}
